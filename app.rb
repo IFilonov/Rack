@@ -46,7 +46,7 @@ private
     end
     if bad_formats.count > 0
       @status = BAD_REQUEST
-      @body = "Unknown time format #{bad_formats.join(",")}"
+      @body = "Unknown time format [#{bad_formats.join(",")}]"
       return
     end
     return formats
