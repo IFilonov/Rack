@@ -38,7 +38,7 @@ private
     if formats.count > 0
       bad_formats = []
       formats.each do |format|
-        bad_formats << format unless TimeFormat::AVAILABLE_FORMATS.include?(format)
+        bad_formats << format unless TimeFormat::valid?(format)
       end
       return bad_params(bad_formats) if bad_formats.count > 0
     end
